@@ -16,8 +16,12 @@ with open('ir1.ll', 'r') as f:
 with open('ir2.ll', 'r') as f:
     ir2 = f.read()
 
+with open('ir3.ll', 'r') as f:
+    ir3 = f.read()
+
 ptx0 = nvvm.llvm_to_ptx(ir0, **opts)
 ptx1 = nvvm.llvm_to_ptx(ir1, **opts)
 ptx2 = nvvm.llvm_to_ptx(ir2, **opts)
+ptx3 = nvvm.llvm_to_ptx(ir3, **opts)
 
-print(ptx2.decode())
+print(ptx3.decode())
